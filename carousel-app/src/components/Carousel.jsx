@@ -3,8 +3,6 @@ import React, { useEffect, useState } from 'react';
 export default function Carousel (){
 const [data, setData] = useState([]);
 
-
-
 async function requestAPI() {
     const endpoint = 'https://api.mercadolibre.com/sites/MLB/search?q=cel';
     const response = await fetch(endpoint);
@@ -18,15 +16,16 @@ async function requestAPI() {
     }, []);
 
     return(
-        <div>
-    <h1>Carousel</h1>
+        <div className='carousel'>
 
         {
             data?.map(({id, thumbnail, title, price}) =>(
-                <div key={id}>
-                    <img src={thumbnail} alt={title} style={ { width: '200px', height: '200px' } }/>
-                    <p>{title}</p>
-                    <p>R$:{price}</p>
+                <div key={id} className='card-cel'>
+                    <img src={thumbnail} alt={title} className='img-card'/>
+                    <div className='info'>
+                    <p className='name-card'> 20% OFF</p>
+                    <span>R$:{price}</span>
+                    </div>
                 </div>
             ))
         }

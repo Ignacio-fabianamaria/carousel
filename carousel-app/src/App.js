@@ -3,7 +3,7 @@ import Carousel from './components/Carousel';
 
 function App() {
   return (
-    <div className="App">
+    <div className="container">
       <Carousel />
     </div>
   );

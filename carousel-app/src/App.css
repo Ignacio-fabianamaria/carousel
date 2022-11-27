@@ -32,6 +32,10 @@ body{
   scroll-behavior: smooth;
 }
 
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
 .card{
 background-color: white;
 margin: 10px;
@@ -85,8 +89,9 @@ gap:60px;
 button{
   background-color: black;
   border: none;
+  cursor: pointer;
 }
 
 button>img{
-  width: 40px;
+  width: 45px;
 }
